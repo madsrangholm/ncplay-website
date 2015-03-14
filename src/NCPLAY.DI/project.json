@@ -1,0 +1,18 @@
+﻿{
+	"version": "1.0.0-*",
+	"dependencies": {
+		"NCPLAY.BLL": "",
+		"NCPLAY.DAL.BattleNet": "",
+		"NCPLAY.DAL.Riot": "",
+		"NCPLAY.DAL.Steam": ""
+	},
+
+    "frameworks" : {
+        "aspnetcore50" : { 
+            "dependencies": {
+				"System.Runtime": "4.0.20-beta-22523",
+				"Microsoft.Framework.Cache.Memory": "1.0.0-beta3"
+            }
+        }
+    }
+}

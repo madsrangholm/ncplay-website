@@ -1,0 +1,22 @@
+﻿{
+	"version": "1.0.0-*",
+	"dependencies": {
+		"Newtonsoft.Json": ""
+
+	},
+
+	"frameworks": {
+		"aspnetcore50": {
+			"dependencies": {
+				"System.Runtime": "4.0.20-beta-22523",
+				"Microsoft.Framework.ConfigurationModel": "1.0.0-beta3",
+				"Microsoft.Framework.ConfigurationModel.Json": "1.0.0-beta3",
+				"System.Diagnostics.Contracts": "4.0.0-beta-22605",
+				"System.Net.Http": "4.0.0-beta-22605",
+				"System.Text.RegularExpressions": "4.0.10-beta-22605",
+				"System.Collections.Concurrent": "4.0.10-beta-22605",
+				
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+﻿{
+	"apiConfig": {
+		"battleNet": {
+			"apiKey": "sc6z726vtbjmmkprr5fdhdh24vsy4f9d",
+			"locale": "en_GB",
+			"thumbnailUrlPrefix": "http://eu.battle.net/static-render/eu/",
+			"wowConfig": {
+				"iconUrlPrefix": "http://eu.media.blizzard.com/wow/icons/56/",
+				"iconFileExtension": ".jpg",
+				"backgroundImageUrlPrefix": "http://www.wowroster.net/Interface/TalentFrame/",
+				"backgroundImageFileExtension": ".png",
+				"apiUrl": "https://eu.api.battle.net/wow/"
+			},
+			"sc2Config": {
+				"profilePathPrefix": "http://eu.battle.net/sc2/en",
+				"apiUrl": "https://eu.api.battle.net/sc2/"
+			}
+		},
+		"steamWebApi": {
+			"apiKey": "53FFFECC7A368C7AFA52E6EFAB083EE9",
+			"supportedApiListUri": "http://api.steampowered.com/ISteamWebAPIUtil/GetSupportedAPIList/v0001/",
+			"playerSummariesUri": "http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/",
+			"appListUri": "http://api.steampowered.com/ISteamApps/GetAppList/v2"
+		},
+		"riotWebApi": {
+			"apiKey": "5a2103f6-c371-4d8d-bbda-52eb5de985cf",
+			"lolConfig": {
+				"summonerByNameResponseUri": "https://$[region].api.pvp.net/api/lol/$[region]/v1.4/summoner/by-name/$[summonernames]?api_key=$[apikey]",
+				"recentGamesBySummonerIdUri": "https://$[region].api.pvp.net/api/lol/$[region]/v1.3/game/by-summoner/$[summonerid]/recent?api_key=$[apikey]",
+				"currentGameBySummonerIdUri": "https://$[region].api.pvp.net/observer-mode/rest/consumer/getSpectatorGameInfo/$[platformid]/$[summonerid]?api_key=$[apikey]",
+				"allChampionsUri": "https://$[region].api.pvp.net/api/lol/$[region]/v1.2/champion?api_key=$[apikey]",
+				"leaguesMappedBySummonerIdUri": "https://$[region].api.pvp.net/api/lol/$[region]/v2.5/league/by-summoner/$[summonerid]?api_key=$[apikey]"
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+﻿{
+	"version": "1.0.0-*",
+	"dependencies": {
+		"NCPLAY.BLL": "",
+		"NCPLAY.DI": ""
+		
+	},
+	"frameworks": {
+		"aspnetcore50": {
+			"dependencies": {
+				"System.Runtime": "4.0.20-beta-22523",
+				"xunit":"2.0.0-rc4-build2924",
+				"xunit.runners": "2.0.0-rc4-build2924"			
+			}
+		}
+	},
+	"commands": {
+		"test": "Xunit.KRunner"
+	}
+}
