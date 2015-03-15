@@ -24,8 +24,10 @@ namespace NCPLAY.DI
 			    .AddTransient<IWowApi, WowApi>()
 			    .AddTransient<IRiotWebApi, RiotWebApi>()
 			    .AddTransient<ISteamWebApi, SteamWebApi>()
-			    .AddTransient<IBattleNetConfig, BattleNetConfig>();
-			return collection;
+                .AddTransient<IDota2Api, Dota2Api>()
+                .AddTransient<IBattleNetConfig, BattleNetConfig>()
+                .AddTransient<ISteamConfig, SteamConfig>();
+            return collection;
 	    }
     }
 }

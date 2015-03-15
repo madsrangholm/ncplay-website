@@ -4,8 +4,7 @@ namespace NCPLAY.BLL.Datatypes.Steam
 {
     public class GetPlayerSummariesResponse : ApiResponse
     {
-        public SupportedApiList Response { get; set; }
-
+        //public SupportedApiList Response { get; set; }
 
         public string Type { get; set; }
         public bool Optional { get; set; }
@@ -67,9 +66,9 @@ namespace NCPLAY.BLL.Datatypes.Steam
             public long loccityid { get; set; }
         }
 
-        public class SupportedApiList
-        {
-            public List<PlayerSummary> players { get; set; }
-        }
+        //public class SupportedApiList
+        //{
+        //    public List<PlayerSummary> players { get; set; }
+        //}
     }
 }

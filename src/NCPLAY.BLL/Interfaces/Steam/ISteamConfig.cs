@@ -1,4 +1,6 @@
-﻿namespace NCPLAY.BLL.Interfaces.Steam
+﻿using NCPLAY.BLL.Config;
+
+namespace NCPLAY.BLL.Interfaces.Steam
 {
     public interface ISteamConfig
     {
@@ -6,5 +8,7 @@
         string SupportedApiListUri { get; }
         string PlayerSummariesUri { get; }
         string AppListUri { get; }
+
+        Dota2ConfigElement Dota2Config { get; }
     }
 }

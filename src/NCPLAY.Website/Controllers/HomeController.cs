@@ -5,16 +5,19 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Mvc;
 using NCPLAY.BLL.Datatypes.BattleNet.Starcraft2;
 using NCPLAY.BLL.Interfaces.BattleNet;
+using NCPLAY.BLL.Interfaces.Steam;
 
 namespace NCPLAY.Website.Controllers
 {
 	public class HomeController : Controller
 	{
 		private readonly ISc2Api _sc2Api;
+	    private readonly IDota2Api _dota2Api;
 
-		public HomeController(ISc2Api sc2Api)
+		public HomeController(ISc2Api sc2Api, IDota2Api dota2Api)
 		{
 			_sc2Api = sc2Api;
+		    _dota2Api = dota2Api;
 		}
 
 		public IActionResult Index()
@@ -26,6 +29,8 @@ namespace NCPLAY.Website.Controllers
 			//var jonasProfile = _sc2Api.GetProfileMatchHistory(5598407, "JJohansen").Result;
 
 			var ladder = _sc2Api.GetLadder(168962).Result;
+
+		    var test = _dota2Api.GetMatchHistory(76561198015106536).Result;
 			watch.Stop();
 			//var wins = jonasProfile.Matches.Count(x => x.Decision == Sc2MatchResult.Win);
 			//var lost = jonasProfile.Matches.Count(x => x.Decision != Sc2MatchResult.Win);
