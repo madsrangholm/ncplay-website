@@ -24,5 +24,14 @@ namespace NCPLAY.DAL.Steam
                     _config.ApiKey,
                     accountId));
         }
+
+        public async Task<GetHeroesResponse> GetHeroes(string language)
+        {
+            return await JsonGetObject<GetHeroesResponse, EmptyErrorResponse>(
+                string.Format("{0}?key={1}&language={2}",
+                    _config.Dota2Config.GetHeroesUri,
+                    _config.ApiKey,
+                    language));
+        }
     }
 }

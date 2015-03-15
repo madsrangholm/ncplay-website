@@ -39,5 +39,7 @@ namespace NCPLAY.BLL.Config
             _prefix = prefix;
         }
         public string GetMatchHistoryUri => _config.Get(_prefix + "getMatchHistoryUri");
+
+        public string GetHeroesUri => _config.Get(_prefix + "getHeroesUri");
     }
 }

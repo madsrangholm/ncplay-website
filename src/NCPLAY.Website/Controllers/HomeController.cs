@@ -30,8 +30,9 @@ namespace NCPLAY.Website.Controllers
 
 			var ladder = _sc2Api.GetLadder(168962).Result;
 
-		    var test = _dota2Api.GetMatchHistory(76561198015106536).Result;
-			watch.Stop();
+            //var test = _dota2Api.GetMatchHistory(76561198015106536).Result;
+            var test = _dota2Api.GetHeroes("en_us").Result;
+            watch.Stop();
 			//var wins = jonasProfile.Matches.Count(x => x.Decision == Sc2MatchResult.Win);
 			//var lost = jonasProfile.Matches.Count(x => x.Decision != Sc2MatchResult.Win);
 			//ViewBag.Title = "Jonas winrate = " + (wins*100/(double) (lost+wins)).ToString("F")+ " %";
