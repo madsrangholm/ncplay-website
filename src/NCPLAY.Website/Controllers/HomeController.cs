@@ -32,6 +32,9 @@ namespace NCPLAY.Website.Controllers
 
             //var test = _dota2Api.GetMatchHistory(76561198015106536).Result;
             var test = _dota2Api.GetHeroes("en_us").Result;
+
+		    string url = test.Result.Heroes[0].HeroPortaitFullUrl;
+
             watch.Stop();
 			//var wins = jonasProfile.Matches.Count(x => x.Decision == Sc2MatchResult.Win);
 			//var lost = jonasProfile.Matches.Count(x => x.Decision != Sc2MatchResult.Win);
