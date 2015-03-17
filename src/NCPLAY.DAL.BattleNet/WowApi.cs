@@ -16,7 +16,7 @@ namespace NCPLAY.DAL.BattleNet
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="config"></param>
+        /// <param Name="config"></param>
         public WowApi(IBattleNetConfig config)
         {
             _config = config;

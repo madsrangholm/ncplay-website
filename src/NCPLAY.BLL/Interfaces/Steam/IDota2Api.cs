@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 using NCPLAY.BLL.Datatypes.Steam;
+using NCPLAY.BLL.Datatypes.Steam.Dota2;
 
 namespace NCPLAY.BLL.Interfaces.Steam
 {

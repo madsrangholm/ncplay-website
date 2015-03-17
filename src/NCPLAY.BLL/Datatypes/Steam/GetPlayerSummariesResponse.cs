@@ -14,7 +14,7 @@ namespace NCPLAY.BLL.Datatypes.Steam
         {
             //64bit SteamID of the user
             public long steamid { get; set; }
-            //The player's persona name (display name)
+            //The player's persona Name (display Name)
             public string personaname { get; set; }
             //The full URL of the player's Steam Community profile.
             public string profileurl { get; set; }
@@ -54,7 +54,7 @@ namespace NCPLAY.BLL.Datatypes.Steam
             //The ip and port of the game server the user is currently playing on, if they are playing on-line in a game using Steam matchmaking. 
             //Otherwise will be set to "0.0.0.0:0".
             public string gameserverip { get; set; }
-            //If the user is currently in-game, this will be the name of the game they are playing. This may be the name of a non-Steam game shortcut.
+            //If the user is currently in-game, this will be the Name of the game they are playing. This may be the Name of a non-Steam game shortcut.
             public string gameextrainfo { get; set; }
             //This value will be removed in a future update (see loccityid)
             public long cityid { get; set; }

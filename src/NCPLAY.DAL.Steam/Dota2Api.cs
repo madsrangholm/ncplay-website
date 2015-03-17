@@ -4,6 +4,7 @@ using NCPLAY.BLL.Interfaces.Steam;
 using NCPLAY.BLL.Helpers;
 using NCPLAY.BLL.Datatypes;
 using System;
+using NCPLAY.BLL.Datatypes.Steam.Dota2;
 
 namespace NCPLAY.DAL.Steam
 {

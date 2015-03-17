@@ -1,5 +1,4 @@
-﻿using Microsoft.Framework.Cache.Memory;
-using Microsoft.Framework.ConfigurationModel;
+﻿using Microsoft.Framework.ConfigurationModel;
 using Microsoft.Framework.DependencyInjection;
 using NCPLAY.BLL.Config;
 using NCPLAY.BLL.Helpers;
@@ -19,12 +18,12 @@ namespace NCPLAY.DI
 	    {
 		    collection
 				.AddSingleton(s => config)
-			    .AddSingleton<IObjectCache, ObjectCache>()
-				.AddTransient<ISc2Api, Sc2ApiCached>()
-			    .AddTransient<IWowApi, WowApi>()
-			    .AddTransient<IRiotWebApi, RiotWebApi>()
-			    .AddTransient<ISteamWebApi, SteamWebApi>()
-                .AddTransient<IDota2Api, Dota2Api>()
+			    .AddTransient<IObjectCache, ObjectCache>()
+				.AddSingleton<ISc2Api, Sc2ApiCached>()
+			    .AddSingleton<IWowApi, WowApiCached>()
+			    .AddSingleton<IRiotWebApi, RiotWebApi>()
+			    .AddSingleton<ISteamWebApi, SteamWebApi>()
+                .AddSingleton<IDota2Api, Dota2ApiCached>()
                 .AddTransient<IBattleNetConfig, BattleNetConfig>()
                 .AddTransient<ISteamConfig, SteamConfig>();
             return collection;

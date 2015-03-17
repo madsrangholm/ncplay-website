@@ -9,7 +9,7 @@ namespace NCPLAY.DAL.BattleNet
     public class Sc2ApiCached : Sc2Api, ISc2Api
     {
         private readonly IObjectCache _cache;
-		private readonly TimeSpan _validDuration = new TimeSpan(0,0,5);
+		private readonly TimeSpan _validDuration = new TimeSpan(0,30,0);
         public Sc2ApiCached(IObjectCache cache, IBattleNetConfig config) : base(config)
         {
 			_cache = cache;

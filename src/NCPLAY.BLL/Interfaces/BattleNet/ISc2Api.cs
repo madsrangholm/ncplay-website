@@ -9,8 +9,8 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
     {
         public Task<ProfileResponse> GetProfile(int id, string name)
         {
-            Contract.Requires(0 < id,"id must be greater than 0");
-            Contract.Requires(!string.IsNullOrEmpty(name), "name cannot be null or empty");
+            Contract.Requires(0 < id,"Id must be greater than 0");
+            Contract.Requires(!string.IsNullOrEmpty(name), "Name cannot be null or empty");
             Contract.Ensures(Contract.Result<Task<ProfileResponse>>().Result != null);
             return default(Task<ProfileResponse>);
         }
@@ -18,8 +18,8 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 
         public Task<ProfileLaddersResponse> GetProfileLadders(int id, string name)
         {
-            Contract.Requires(0 < id, "id must be greater than 0");
-            Contract.Requires(!string.IsNullOrEmpty(name), "name cannot be null or empty");
+            Contract.Requires(0 < id, "Id must be greater than 0");
+            Contract.Requires(!string.IsNullOrEmpty(name), "Name cannot be null or empty");
             Contract.Ensures(Contract.Result<Task<ProfileLaddersResponse>>().Result != null);
             return default(Task<ProfileLaddersResponse>);
         }
@@ -27,8 +27,8 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 
         public Task<ProfileMatchHistoryResponse> GetProfileMatchHistory(int id, string name)
         {
-            Contract.Requires(0 < id, "id must be greater than 0");
-            Contract.Requires(!string.IsNullOrEmpty(name), "name cannot be null or empty");
+            Contract.Requires(0 < id, "Id must be greater than 0");
+            Contract.Requires(!string.IsNullOrEmpty(name), "Name cannot be null or empty");
             Contract.Ensures(Contract.Result<Task<ProfileMatchHistoryResponse>>().Result != null);
             return default(Task<ProfileMatchHistoryResponse>);
         }
@@ -36,7 +36,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 
         public Task<LadderResponse> GetLadder(int id)
         {
-            Contract.Requires(0 < id, "id must be greater than 0");
+            Contract.Requires(0 < id, "Id must be greater than 0");
             Contract.Ensures(Contract.Result<Task<LadderResponse>>().Result != null);
             return default(Task<LadderResponse>);
         }

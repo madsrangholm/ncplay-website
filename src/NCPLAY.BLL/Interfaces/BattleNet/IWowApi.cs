@@ -11,7 +11,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 	{
 		public Task<AchievementResponse> GetAchievement(int id)
 		{
-			Contract.Requires(0 <= id, "id must be positive");
+			Contract.Requires(0 <= id, "Id must be positive");
 			Contract.Ensures(Contract.Result<Task<AchievementResponse>>().Result != null);
 			return default(Task<AchievementResponse>);
 		}
@@ -140,7 +140,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
         /// <summary>
         ///     This provides data about an individual achievement.
         /// </summary>
-        /// <param name="id">The ID of the achievement to retrieve.</param>
+        /// <param Name="Id">The ID of the achievement to retrieve.</param>
         /// <returns></returns>
         Task<AchievementResponse> GetAchievement(int id);
 
@@ -150,7 +150,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
         ///     fetching the most recently generated dump file if necessary.
         ///     This API resource provides a per-realm list of recently generated auction house data dumps.
         /// </summary>
-        /// <param name="realm">The realm being requested.</param>
+        /// <param Name="realm">The realm being requested.</param>
         /// <returns></returns>
         Task<AuctionDataResponse> GetAuctionDataStatus(string realm);
 
@@ -158,7 +158,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
         ///     This provides data about a individual battle pet ability ID. We do not provide the tooltip for the ability yet. We
         ///     are working on a better way to provide this since it depends on your pet's species, level and quality rolls.
         /// </summary>
-        /// <param name="abilityId">The ID of the ability you want to retrieve.</param>
+        /// <param Name="abilityId">The ID of the ability you want to retrieve.</param>
         /// <returns></returns>
         Task<BattlepetAbilitiesResponse> GetBattlepetAbilities(int abilityId);
 
@@ -166,19 +166,19 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
         ///     This provides the data about an individual pet species. The species IDs can be found your character profile using
         ///     the options pets field. Each species also has data about what it's 6 abilities are.
         /// </summary>
-        /// <param name="speciesId">The species you want to retrieve data on.</param>
+        /// <param Name="speciesId">The species you want to retrieve data on.</param>
         /// <returns></returns>
         Task<BattlepetSpeciesResponse> GetBattlepetSpecies(int speciesId);
 
         /// <summary>
         ///     Retrieve detailed information about a given species of pet.
         /// </summary>
-        /// <param name="speciesId">
+        /// <param Name="speciesId">
         ///     The pet's species ID. This can be found by querying a users' list of pets via the Character
         ///     Profile API.
         /// </param>
-        /// <param name="level">The pet's level. Pet levels max out at 25. If omitted the API assumes a default value of 1.</param>
-        /// <param name="breedId">
+        /// <param Name="level">The pet's level. Pet levels max out at 25. If omitted the API assumes a default value of 1.</param>
+        /// <param Name="breedId">
         ///     The pet's breed. Retrievable via the Character Profile API. If omitted the API assumes a default
         ///     value of 3.
         /// </param>
@@ -196,7 +196,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
         ///     The character data includes the current cached spec of the character while the member field includes the spec of
         ///     the character during the challenge mode run.
         /// </summary>
-        /// <param name="realm">The realm being requested.</param>
+        /// <param Name="realm">The realm being requested.</param>
         /// <returns></returns>
         Task<ChallengeResponse> GetChallengeLeaderboardRealm(string realm);
 
@@ -210,9 +210,9 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="realm">The realm being requested.</param>
-		/// <param name="characterName">The name of the character you want to retrieve.</param>
-		/// <param name="fields">Specifies what data you want to retrieve.</param>
+		/// <param Name="realm">The realm being requested.</param>
+		/// <param Name="characterName">The Name of the character you want to retrieve.</param>
+		/// <param Name="fields">Specifies what data you want to retrieve.</param>
 		/// <returns></returns>
 		Task<CharacterProfileResponse> GetCharacterProfile(string realm, string characterName,
             IEnumerable<CharacterProfileResponse.CharacterProfileField> fields = null);
@@ -220,7 +220,7 @@ namespace NCPLAY.BLL.Interfaces.BattleNet
 		/// <summary>
 		/// The item API provides detailed item information. This includes item set information if this item is part of a set.
 		/// </summary>
-		/// <param name="id">Unique ID of the item being requested.</param>
+		/// <param Name="Id">Unique ID of the item being requested.</param>
 		/// <returns></returns>
 		Task<ItemResponse> GetItem(int id);
     }

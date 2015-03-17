@@ -28,18 +28,18 @@ namespace NCPLAY.Website.Controllers
 
 			//var jonasProfile = _sc2Api.GetProfileMatchHistory(5598407, "JJohansen").Result;
 
-			var ladder = _sc2Api.GetLadder(168962).Result;
+			var ladderTask = _sc2Api.GetLadder(168962);
 
             //var test = _dota2Api.GetMatchHistory(76561198015106536).Result;
-            var test = _dota2Api.GetHeroes("en_us").Result;
+            var heroesTask = _dota2Api.GetHeroes("en_us");
 
-		    string url = test.Result.Heroes[0].HeroPortaitFullUrl;
+		    string url = heroesTask.Result.Result.Heroes[0].HeroPortaitFullUrl;
 
             watch.Stop();
 			//var wins = jonasProfile.Matches.Count(x => x.Decision == Sc2MatchResult.Win);
 			//var lost = jonasProfile.Matches.Count(x => x.Decision != Sc2MatchResult.Win);
 			//ViewBag.Title = "Jonas winrate = " + (wins*100/(double) (lost+wins)).ToString("F")+ " %";
-			ViewBag.Title = ladder.LadderMembers.Count;
+			ViewBag.Title = ladderTask.Result.LadderMembers.Count;
 			ViewBag.ServiceCallTime = watch.ElapsedMilliseconds;
 			return View();
 		}

@@ -10,7 +10,7 @@ namespace NCPLAY.BLL.Helpers
         /// <summary>
         ///     Convert an epoch time notation to a DateTime object
         /// </summary>
-        /// <param name="number">Epoch time notation</param>
+        /// <param Name="number">Epoch time notation</param>
         /// <returns>Corresponding DateTime object</returns>
         public static DateTime EpochToDate(this long number)
         {
